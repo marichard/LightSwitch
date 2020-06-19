@@ -16,7 +16,7 @@ A one button app that changes button text, title text, and the background pictur
 
 ## Screenshot
 
-![Image](img/ScreenShot.png)
+![Image](img/screenshot.png)
 
 * Image assets provided by [Unsplash](https://unsplash.com/).
 
