@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Light SwitchVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LightSwitchVC" customModule="LightSwitch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="night" translatesAutoresizingMaskIntoConstraints="NO" id="3a5-6h-kWY">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lights Off" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EsU-R5-YMm">
+                                <rect key="frame" x="67.666666666666686" y="79" width="240" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="CwZ-8p-bcJ"/>
+                                    <constraint firstAttribute="width" constant="240" id="Zw9-L0-Qxf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8QT-sn-RVA" customClass="SwitchButton" customModule="LightSwitch" customModuleProvider="target">
+                                <rect key="frame" x="87.666666666666686" y="628" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="T3h-Yk-AO2"/>
+                                    <constraint firstAttribute="width" constant="200" id="puw-eu-rXf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Light Switch">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="switchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y5q-zc-CiD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="8QT-sn-RVA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0wy-n4-uYK"/>
+                            <constraint firstItem="3a5-6h-kWY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="8rd-u9-5kp"/>
+                            <constraint firstItem="3a5-6h-kWY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="H5u-2s-yWN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8QT-sn-RVA" secondAttribute="bottom" constant="100" id="KHt-B7-cDo"/>
+                            <constraint firstItem="EsU-R5-YMm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ajg-IO-clF"/>
+                            <constraint firstAttribute="bottom" secondItem="3a5-6h-kWY" secondAttribute="bottom" id="gtL-2A-eix"/>
+                            <constraint firstItem="EsU-R5-YMm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="l73-60-JXT"/>
+                            <constraint firstItem="3a5-6h-kWY" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="m1e-yZ-4Pa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="lightsImage" destination="3a5-6h-kWY" id="lHy-6h-wFp"/>
+                        <outlet property="lightsLabel" destination="EsU-R5-YMm" id="1Z3-Zg-ioR"/>
+                        <outlet property="switchedButton" destination="8QT-sn-RVA" id="MEL-1t-Yph"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="112.3152709359606"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="night" width="2814" height="4221"/>
+    </resources>
+</document>
